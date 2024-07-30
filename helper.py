@@ -9,7 +9,8 @@ from langchain.chains import RetrievalQA
 from langchain.memory import ConversationBufferWindowMemory
 from langchain import PromptTemplate
 from langchain.memory import PostgresChatMessageHistory
-    
+import requests
+from datetime import datetime
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
 # from dataCreation import get_docs
@@ -51,7 +52,7 @@ def load_vectorDB(collection_name):
 )
     
 
-def get_template(query):
+def get_template(query,user_name ,user_email,date):
     #  get tags
     model = ChatGoogleGenerativeAI(model="gemini-pro", convert_system_message_to_human=True)
     functionCode = model(
@@ -69,9 +70,22 @@ def get_template(query):
     functionCode = str(functionCode).split("$$")[1]
 
     print("functionCode ---->" , functionCode)
+    timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
+    userid = f"{user_name}_{timestamp}"
 
     if (functionCode == "helpH"):
         print("requested human help ...")
+        url = 'https://brainxchatbot.vercel.app/api/contact'
+        headers = {
+        "userID": userid,
+        "condition": "assistance",
+        "userName": user_name,
+        "userEmail": user_email,
+        "lastDate": "25/7",
+      }
+        response = requests.post(url, headers=headers, data={})
+        print("response ====> ",response)
+
         return  {
             "template" : "" , 
             "functionCode" : "helpH",
@@ -113,10 +127,10 @@ def get_template(query):
                 "message": "something went wrong, contact us at contact@brainx.com"}
             
 
-def ask_ai(companyName , query):
+def ask_ai(companyName , query,user_name ,user_email,date):
     # load vector db
     load_vectorDB(companyName)
-    templateObject = get_template(query)
+    templateObject = get_template(query,user_name ,user_email,date)
     print("\n\n\nprompt ----------- ",templateObject)
     if templateObject["functionCode"] == "continue":
         prompt = PromptTemplate(

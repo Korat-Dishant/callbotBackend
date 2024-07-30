@@ -24,8 +24,8 @@ initialize_embeddings()
 
 
 @app.post("/ask" ,  summary="pass value using header")
-async def read_items(user_query:str):
-    return {"response": str(ask_ai(companyName = "callbot", query= user_query)) }
+async def read_items(user_query:str , user_name:str, user_email:str, date:str):
+    return {"response": str(ask_ai(companyName = "callbot", query= user_query , user_name= user_name ,user_email=user_email,date=date )) }
 
 
 
