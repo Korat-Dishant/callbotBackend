@@ -1,0 +1,4 @@
+name : Mike Lopez
+gender : male
+location : ahmedabad
+location issue : recorded DDOS attack on the ahmedabad region. services would be online tomorrow.

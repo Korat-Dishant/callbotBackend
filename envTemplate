@@ -1,0 +1,14 @@
+GOOGLE_API_KEY=#####GEMINI_API_KEY##############
+HUGGINGFACE_API_KEY=#######HUGGINGFACE_API_KEY##############
+# ZILLIZ Public Endpoint shown under cluster details
+ZILLIZ_CLOUD_URI =#####ZILLIZ_CLOUD_URI##########
+ZILLIZ_CLOUD_USERNAME =##############ZILLIZ_CLOUD_USERNAME###########
+ZILLIZ_CLOUD_PASSWORD =############ZILLIZ_CLOUD_PASSWORD#############
+ZILLIZ_CLOUD_API_KEY =###########ZILLIZ_CLOUD_API_KEY###############
+
+# if your are using any of the openAI LLMs
+OPENAI_API_KEY=################OPENAI_API_KEY#####################3333
+
+# if you are using PostgresChatMessageHistory
+POSTGRES_CONNECTION_STRING=####################POSTGRES_CONNECTION_STRING############
+

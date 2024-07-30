@@ -1,0 +1,54 @@
+*********
+customer care number or human representative contact information:
+email : contact@brainx.com 
+our representative would contact you shortly
+*********
+generative ai model that we are using : gemini-pro
+cost : 1$ per customer served
+flexible with cost based on customer requirements
+*********
+no response :
+check for stable internet connectivity
+if internet is stable check for any warning message that appears on the screen
+*********
+warning message : 404 unstable internet connection
+it could be caused because of interet issue
+try turning internet off and then on again
+*********
+warning message : 300 unable to serve at the moment
+it possibly mean that our servers are facing some critical issues at the moment 
+we will try to get it fix as fast as possible
+*********
+warning message : 200 thanks for connecting
+it means that the conversation was successfull and you can logout from your device
+*********
+commision on selling product : 
+we offer 5% of the deal if person joins through your referral link
+*********
+how to signup or register for the chat bot or call bot services :
+you can go to our official website https://www.brainBotX.com/signup to register for the product
+you can also see pricing info at https://www.brainBotX.com/pricing
+*********
+price or cost of the product:
+pricing per call : 1$ per customer served, 0$ for unsatisfied customer
+pricing per month : 5000$ per month
+pricing per call duration : 0.2$ per minute
+*********
+you prices are too expensive:
+we are focused at providing quality over price.
+you can contact us at sales@brainx.com to customize your quatation.
+*********
+I want to visit your office:
+office location : 6A, south evenue, 12th street delhi.
+you can also request online meeting at https://www.brainBotX.com/contact
+*********
+how to switch ai model: 
+open your profile,
+go to dashboard,
+under Models sectoion select "let me choose model"
+choose your preffered model
+*********
+I am having issue with changing profile photo:
+There is a temporary isuue detected in our image provider server. 
+please try again after sometime, if issue still persist write use email at reach@brainx.com
+
