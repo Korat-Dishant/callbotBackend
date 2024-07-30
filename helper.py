@@ -72,10 +72,10 @@ def get_template(query,user_name ,user_email,date):
     print("functionCode ---->" , functionCode)
     timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
     userid = f"{user_name}_{timestamp}"
+    url = 'https://brainxchatbot.vercel.app/api/contact'
 
     if (functionCode == "helpH"):
         print("requested human help ...")
-        url = 'https://brainxchatbot.vercel.app/api/contact'
         headers = {
         "userID": userid,
         "condition": "assistance",
@@ -93,6 +93,16 @@ def get_template(query,user_name ,user_email,date):
     else : 
         if (functionCode == "contactSoon"):
             print("angry user ...")
+            headers = {
+                "userID": userid,
+                "condition": "urgent",
+                "userName": user_name,
+                "userEmail": user_email,
+                "lastDate": "25/7",
+              }
+            response = requests.post(url, headers=headers, data={})
+            print("response ====> ",response)
+
             return  {
                 "template" : "" , 
                 "functionCode" : "contactSoon",
